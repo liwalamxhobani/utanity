@@ -1,0 +1,252 @@
+/* ==========================================================================
+   MUSIC VIDEOS PAGE STYLES
+   ========================================================================== */
+
+.videos-container {
+  max-width: 1200px;
+  margin: 80px auto 40px auto; /* 80px top margin to clear fixed navbar */
+  padding: 0 20px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  color: #aaa;
+}
+
+/* Video Grid Layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .video-grid { grid-template-columns: 1fr; }
+}
+
+/* Video Card Structure */
+.video-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #222;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--maroon, #800000);
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-icon-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(128, 0, 0, 0.85); /* Maroon overlay */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-card:hover .play-icon-badge {
+  opacity: 1;
+}
+
+.video-info {
+  padding: 15px;
+}
+
+.video-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-info p {
+  margin: 0;
+  color: var(--maroon, #800000);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   CINEMATIC VIDEO OVERLAY & CONTROLS
+   ========================================================================== */
+
+.video-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+}
+
+.video-overlay-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 5vh auto;
+  background: #000;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
+.close-video-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.player-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #050505;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none; /* Toggled by JS */
+}
+
+/* Custom MP4 Video Tag sizing */
+#custom-video-element {
+  width: 100%;
+  height: calc(100% - 60px); /* Leave space for controls */
+  background: #000;
+}
+
+/* Custom Controller Bar Layout */
+.custom-video-controls {
+  height: auto;
+  background: #111;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.video-timeline-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.video-timeline-row input[type="range"] {
+  width: 100%;
+  accent-color: var(--maroon, #800000);
+  cursor: pointer;
+  height: 6px;
+  border-radius: 3px;
+  background: #333;
+}
+
+.video-buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.video-buttons-row button {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.video-buttons-row button:hover {
+  background: var(--maroon, #800000);
+  border-color: var(--maroon, #800000);
+  transform: translateY(-1px);
+}
+
+/* Play/Pause Main Accent Button */
+.video-buttons-row .vid-main-btn {
+  font-weight: bold;
+  background: var(--maroon, #800000);
+  border-color: var(--maroon, #800000);
+  padding: 8px 24px;
+}
+
+.video-buttons-row .vid-main-btn:hover {
+  background: #990000;
+  border-color: #990000;
+}
+
+.video-time-display {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-family: monospace;
+  margin-left: auto; /* Aligns times perfectly to the right side of the control tray */
+  letter-spacing: 0.5px;
+}
+
+#video-fullscreen {
+  padding: 8px 12px; /* Marginally tighter width since it only contains one square icon symbol */
+}
+
+#video-fullscreen i {
+  font-size: 0.95rem;
+}
+
+#youtube-player-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

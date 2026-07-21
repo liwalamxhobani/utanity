@@ -1,0 +1,144 @@
+/* --- FEED PAGE STYLES --- */
+.feed-section {
+  padding: 120px 5% 60px;
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
+.feed-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.feed-header h1 {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  line-height: 0.9;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.feed-header .accent {
+  color: var(--maroon);
+  display: block; /* Puts "Feed" on a new line for impact */
+}
+
+.feed-header p {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+/* --- MASONRY GRID --- */
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-auto-rows: 280px;
+  gap: 30px;
+}
+
+.feed-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #151515;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.feed-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+  border-color: var(--maroon);
+}
+
+/* Card Type Scaling */
+.feed-card.sponsor { grid-row: span 2; border: 2px solid #ffd700; }
+.feed-card.gig { grid-row: span 2; background: linear-gradient(135deg, var(--maroon), #300); }
+.feed-card.booth { grid-row: span 1; }
+.feed-card.merch { grid-row: span 2; }
+
+.feed-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.feed-card img.loaded {
+  opacity: 0.7; /* Slightly dimmed for text readability */
+}
+
+.feed-card:hover img.loaded {
+  opacity: 1;
+}
+
+/* --- OVERLAY TEXT --- */
+.feed-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.95));
+  z-index: 2;
+}
+
+.feed-card-info h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.feed-badge {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: var(--maroon);
+  padding: 8px 16px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  z-index: 3;
+}
+
+/* --- MERCH GALLERY STYLES --- */
+.merch-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.merch-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.merch-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--maroon);
+}
+
+.detail-view h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+  line-height: 1;
+}

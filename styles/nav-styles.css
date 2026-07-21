@@ -1,0 +1,127 @@
+.navbar{
+  background-color: #800000;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+  /* position: fixed; Or 'sticky' (see explanation below) */
+  /* top: 0;
+  left: 0;
+  width: 100%; */
+  /* z-index: 1000; Keeps the navbar layer on top of all photos, cards, and text */
+
+.navbar_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 10px;
+}
+.main-logo {
+  width: 200px;
+  margin-top: 0;
+}
+.navbar_menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.navbar_item{
+  height: 80px;
+}
+.navbar_links{
+  color: #708090;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+.navbar_links:hover{
+  color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 960px) {
+  .navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+    background-color: #800000;
+  }
+  .navbar_menu{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background-color: #800000;
+  }
+  .navbar_menu.active{
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: auto;
+    font-size: 1.6rem;
+  }
+  .navbar_toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #708090;
+  }
+  .navbar_item{
+    width: 100%;
+  }
+  .navbar_links{
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+  .navbar_links:hover{
+  background-color: #f1f1f1;
+  color: #800000;
+  transition: all 0.3s ease;
+  }
+  #mobile-menu{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+  .navbar_toggle .bar{
+    display: block;
+    cursor: pointer;
+  }
+  #mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

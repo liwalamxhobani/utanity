@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Inter', sans-serif; /* Default body text */
+}
+h1, h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.heavy-text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; /* Roboto Black */
+}

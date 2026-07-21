@@ -1,0 +1,75 @@
+
+:root {
+    --maroon: #800000;
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --dark-text: #1a1a1a;
+}
+.about-container {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+/* Hero Section */
+.about-hero {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /* Slight angle for the 'Bold X' feel */
+}
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.accent-text {
+    border-bottom: 4px solid var(--white);
+}
+/* Content Layout */
+.about-content {
+    max-width: 900px;
+    margin: -40px auto 60px; /* Overlaps the hero slightly */
+    padding: 0 20px;
+}
+.about-outro{
+  text-align: center;
+}
+.content-card {
+    background: var(--white);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+.content-card h2 {
+    color: var(--maroon);
+    margin-top: 0;
+}
+/* Mission Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.mission-item {
+    padding: 20px;
+    background: var(--light-gray);
+}
+.mission-item h3 {
+    color: var(--maroon);
+    font-size: 1.2rem;
+}
+.border-left {
+    border-left: 5px solid var(--maroon);
+}
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+}

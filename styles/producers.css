@@ -1,0 +1,192 @@
+/* Producer Specifics */
+.buy-btn {
+  background: var(--maroon);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: white;
+  color: var(--maroon);
+  transform: translateY(-2px);
+}
+
+.beat-tag {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+/* Custom styling for The Yard's accent */
+.logo .accent {
+  color: var(--maroon);
+  font-family: 'Black Ops One', cursive; /* Optional: A rugged font for The Yard */
+  letter-spacing: 2px;
+}
+
+/* Make the Buy/Inquire button feel more 'Street' */
+.buy-btn {
+  background: transparent;
+  border: 2px solid var(--maroon);
+  color: white;
+  padding: 8px 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.buy-btn:hover {
+  background: var(--maroon);
+  box-shadow: 0 0 15px rgba(128, 0, 0, 0.4);
+}
+
+/* --- SEARCH BAR STYLE FOR THE YARD --- */
+.search-container {
+  padding: 40px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #000, transparent);
+}
+
+#producer-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 18px 30px;
+  background: rgba(20, 20, 20, 0.8); /* Dark glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px; /* Pill shape */
+  color: white;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* When the user clicks into the search bar */
+#producer-search:focus {
+  border-color: var(--maroon);
+  background: #151515;
+  box-shadow: 0 0 20px rgba(128, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Styling the placeholder text */
+#producer-search::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #producer-search {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.beat-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.beat-specs {
+  display: flex;
+  gap: 8px;
+}
+
+.spec-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #708090;
+  background: rgba(128, 0, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 0, 0, 0.3);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.spec-tag i {
+  margin-right: 4px;
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+/* Ensure the title doesn't squash the tags */
+.marquee-text {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Remove marquee effect for beats */
+.static-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ... if the name is too long instead of moving */
+}
+
+/* Ensure social icons are visible in the overlay */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-links a i {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-links a i:hover {
+  color: var(--maroon);
+}
+
+/* Ensure the social container inside the overlay is visible */
+.profile-header .social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  justify-content: flex-start; /* Aligns them to the left with the text */
+}
+
+.profile-header .social-links a {
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.profile-header .social-links a:hover {
+  color: var(--maroon);
+  transform: scale(1.1);
+}
+
+/* Specific fix for FontAwesome icons in The Yard */
+.fa-instagram, .fa-tiktok {
+  display: inline-block !important;
+}
