@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTAnity | Music Videos</title>  
+  <link rel="icon" href="logos/utanity logo maroon and white.png">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/nav-styles.css">
+  <link rel="stylesheet" href="styles/home-page-styles.css">
+  <link rel="stylesheet" href="styles/about-us.css">
+  <link rel="stylesheet" href="styles/fresh-music.css">
+  <link rel="stylesheet" href="styles/peak-page.css">
+  <link rel="stylesheet" href="styles/artist-studio.css">
+  <link rel="stylesheet" href="styles/producers.css">
+  <link rel="stylesheet" href="styles/videos.css">
+  <link rel="stylesheet" href="styles/the-feed.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;600&family=Roboto:wght@900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+</head>
+<body>
+<!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar_container"> 
+      <a href="index.html" id="navbar_logo">
+        <img src="logos/utanity logo maroon and white.png" alt="UTAnity Logo" class="main-logo">
+      </a>
+      <div class="navbar_toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar_menu">
+        <li class="navbar_items">
+          <a href="about-us.html" class="navbar_links">About UTAnity</a>
+        </li>
+        <li class="navbar_items">
+          <a href="fresh-music.html" class="navbar_links">
+            Fresh From The 5099</a>
+        </li>
+        <!-- <li class="navbar_items">
+          <a href="peak-page.html" class="navbar_links">Peak of the 5099</a>
+        </li> -->
+        <li class="navbar_items">
+          <a href="artist-studio.html" class="navbar_links">The Artist Studio</a>
+        </li>
+        <li class="navbar_items">
+          <a href="producers.html" class="navbar_links">The Yard</a>
+        </li>
+        <li class="navbar_items">
+          <a href="videoes.html" class="navbar_links">Music Videos</a>
+        </li>
+        <li class="navbar_items">
+          <a href="the-feed.html" class="navbar_links">The 5099 Feed</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main class="videos-container">
+    <header class="page-header">
+      <h1>Music Videos</h1>
+      <p>Watch official releases and exclusive visuals</p>
+    </header>
+
+    <!-- Video Grid -->
+    <div class="video-grid" id="video-grid">
+      <!-- Injected via JavaScript -->
+    </div>
+  </main>
+
+  <!-- VIDEO PLAYER OVERLAY (MODAL) -->
+  <div class="video-overlay" id="video-overlay">
+    <div class="video-overlay-content">
+      <button class="close-video-btn" id="close-video-btn">&times;</button>
+      
+      <!-- Container for YouTube Iframe -->
+      <div id="youtube-player-container" class="player-wrapper"></div>
+
+      <!-- Container for Custom MP4 Player -->
+      <div id="mp4-player-container" class="player-wrapper">
+        <video id="custom-video-element" src=""></video>
+        
+        <!-- Custom Controls Bar -->
+        <div class="custom-video-controls">
+          <div class="video-timeline-row">
+            <input type="range" id="video-seek" value="0" min="0" max="100">
+          </div>
+          <div class="video-buttons-row">
+            <button id="video-back-10"><i class="fa-solid fa-backward"></i> 10s</button>
+            <button id="video-play-pause" class="vid-main-btn">Play</button>
+            <button id="video-forward-10">10s <i class="fa-solid fa-forward"></i></button>
+            <button id="video-fullscreen" title="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button>
+            <div class="video-time-display">
+              <span id="vid-current">0:00</span> / <span id="vid-duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="overlay-video-title">Video Title</h2>
+      <p id="overlay-video-artist">Artist Name</p>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <div class="footer_container">
+    <div class="footer_links">
+      <div class="footer_links-wrapper">
+        <div class="footer_links-items">
+          <h2>Contact Us</h2>
+          <a href="/">Call us</a>
+          <a href="/">E-Mail us</a>
+        </div>
+        <div class="footer_links-items">
+          <h2>Follow Us</h2>
+          <a href="/">Instagram</a>
+          <a href="/">TikTok</a>
+          <a href="/">Facebook</a>
+          <a href="/">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="social_media">
+      <div class="social_media-wrap">
+        <div class="footer_logo">
+          <a href="/" id="footer_logo">
+            <img src="logos/utanity logo maroon.png" alt="UTAnity Logo" class="main-logo">
+          </a>
+        </div>
+        <p class="website_rights">&copy 2026 UTAnity. All rights reserved</p>
+        <div class="social_icons">
+          <a href="/" class="social_icon-link" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="/" class="social_icon-link" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="/" class="social_icon-link" target="_blank">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="/" class="social_icon-link" target="_blank">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="nav-menu.js"></script>
+  <script src="home-page.js"></script>
+  <script src="fresh-music.js"></script>
+  <script src="peak-page.js"></script>
+  <script src="artist-studio.js"></script>
+  <script src="producers.js"></script>
+  <script src="videos.js"></script>
+  <script src="the-feed.js"></script>
+</body>
+</html>
